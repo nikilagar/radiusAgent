@@ -9,7 +9,7 @@ Specify query in main to get the results.
 
 #### Sample Output:
 `Loading time:2797ms` <br />
-`Query time:2877ms` <br />
+`Query time:2877us` <br />
 `Match %99.03473725554315 Id: 160328 Bedrooms: 5 Bathrooms: 2 Price: 1130.4095466644421 Latitude: 50.499958719312566 Longitude: 8.200757155996882 Bath% 20.0 Bed% 20.0 Budget% 30.0 Dis% 29.034737255543156` <br />
 `Match %93.52067809502282 Id: 453669 Bedrooms: 5 Bathrooms: 3 Price: 1043.0351725268188 Latitude: 50.49839638579182 Longitude: 8.204247615445183 Bath% 20.0 Bed% 20.0 Budget% 30.0 Dis% 23.520678095022824` <br />
 `Match %92.94047179797212 Id: 593604 Bedrooms: 5 Bathrooms: 3 Price: 1196.9028055280733 Latitude: 50.49780027819659 Longitude: 8.204120259084164 Bath% 20.0 Bed% 20.0 Budget% 30.0 Dis% 22.94047179797212` <br />

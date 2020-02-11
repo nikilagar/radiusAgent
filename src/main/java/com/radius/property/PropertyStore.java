@@ -25,7 +25,7 @@ public class PropertyStore {
                         query,
                         maxResults,
                         new PropertySearchCriteria(query)));
-        System.out.println("Query time:" + (Instant.now().getNano() - queryStartTime) / 1000 + "ms");
+        System.out.println("Query time:" + (Instant.now().getNano() - queryStartTime) / 1000 + "us");
         for (PropertySpatialPoint point: results.toSortedList()) {
             System.out.print("Match %" + PropertyMatcher.getMatchPercent(point.getProperty(), query) + " " + point.getProperty());
             System.out.println(" Bath% " + PropertyMatcher.getBathroomsMatchScore(point.getProperty(), query) +
