@@ -1,4 +1,4 @@
-package com.radius.jeospatial.util;
+package com.jeospatial.util;
 
 import java.util.Comparator;
 

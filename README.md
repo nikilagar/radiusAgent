@@ -1,5 +1,14 @@
-# radiusAgent
+# RadiusAgent
 RadiusAgent property matching problem
+
+## Assumptions
+* If a value is missing in query then -1 is substituted in place of max value.
+* Following linear reduction in match match percentage when actual != expected.<br /> Eg.
+If budget is 1000 and 10% is relaxed and +/-25% is limit. Then matching budget of value
+between 750 - 900 or 1100 - 1250 is as follows: <br />
+Error allowed = 150 (25% - 10%)<br/>
+Actual error = actual value - expected value (Error is 100 for value 800) <br />
+`Match = (Error allowed - Actual error + 1) / (Error allowed + 1)`
 
 ## Runing
 
@@ -20,3 +29,7 @@ Specify query in main to get the results.
 `Match %86.51427393848786 Id: 740466 Bedrooms: 5 Bathrooms: 2 Price: 1327.871689626633 Latitude: 50.49365436000111 Longitude: 8.2023543091058 Bath% 20.0 Bed% 20.0 Budget% 30.0 Dis% 16.51427393848786` <br />
 `Match %85.35001316784627 Id: 132093 Bedrooms: 5 Bathrooms: 2 Price: 1228.3734258639288 Latitude: 50.493908982054165 Longitude: 8.205677713846626 Bath% 20.0 Bed% 20.0 Budget% 30.0 Dis% 15.35001316784627` <br />
 `Match %85.0003782961819 Id: 395 Bedrooms: 5 Bathrooms: 2 Price: 1715.1410616490612 Latitude: 50.49715570672357 Longitude: 8.210483675137084 Bath% 20.0 Bed% 20.0 Budget% 30.0 Dis% 15.00037829618191` <br />
+
+## Query Time:
+100 - 500 us <br/>
+Enable commented code in App.java to test.

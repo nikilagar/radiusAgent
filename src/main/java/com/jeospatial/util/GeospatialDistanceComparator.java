@@ -1,6 +1,6 @@
-package com.radius.jeospatial.util;
+package com.jeospatial.util;
 
-import com.radius.jeospatial.GeospatialPoint;
+import com.jeospatial.GeospatialPoint;
 
 import java.util.Comparator;
 

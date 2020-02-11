@@ -1,16 +1,12 @@
-package com.radius.jeospatial.vptree;
+package com.jeospatial.vptree;
 
 import java.lang.reflect.Array;
 import java.util.*;
 
-import com.radius.jeospatial.GeospatialPoint;
-import com.radius.jeospatial.GeospatialPointDatabase;
-import com.radius.jeospatial.SearchCriteria;
-import com.radius.jeospatial.util.BoundingBoxSearchCriteria;
-import com.radius.jeospatial.util.GeospatialDistanceComparator;
-import com.radius.jeospatial.util.SimpleGeospatialPoint;
-import com.radius.property.search.PropertySpatialPoint;
-import com.radius.property.search.Query;
+import com.jeospatial.GeospatialPoint;
+import com.jeospatial.GeospatialPointDatabase;
+import com.jeospatial.util.GeospatialDistanceComparator;
+import com.jeospatial.util.SimpleGeospatialPoint;
 
 /**
  * <p>A geospatial database that uses a vantage point tree as its storage

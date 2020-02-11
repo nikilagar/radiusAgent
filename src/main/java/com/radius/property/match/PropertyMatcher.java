@@ -1,7 +1,5 @@
 package com.radius.property.match;
 
-import com.radius.jeospatial.util.SimpleGeospatialPoint;
-import com.radius.jeospatial.vptree.VPTree;
 import com.radius.property.Property;
 import com.radius.property.search.PropertySpatialPoint;
 import com.radius.property.search.Query;
@@ -9,7 +7,8 @@ import com.radius.property.search.Query;
 import java.util.Comparator;
 
 /**
- * Calculate the weighted match score.
+ * For the given query, calculate the weighted match score. Properties can be also compared based
+ * on this.
  */
 public class PropertyMatcher<T extends PropertySpatialPoint> extends Matcher implements Comparator<T> {
     private Query query;

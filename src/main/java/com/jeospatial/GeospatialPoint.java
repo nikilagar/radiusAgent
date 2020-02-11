@@ -1,4 +1,4 @@
-package com.radius.jeospatial;
+package com.jeospatial;
 
 /**
  * A geospatial point is a single point on the earth's surface.

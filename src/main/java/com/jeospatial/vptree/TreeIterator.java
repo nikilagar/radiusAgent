@@ -1,7 +1,6 @@
-package com.radius.jeospatial.vptree;
+package com.jeospatial.vptree;
 
-import com.radius.jeospatial.GeospatialPoint;
-import com.radius.property.search.PropertySpatialPoint;
+import com.jeospatial.GeospatialPoint;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

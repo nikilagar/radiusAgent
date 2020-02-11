@@ -1,4 +1,4 @@
-package com.radius.jeospatial.vptree;
+package com.jeospatial.vptree;
 
 /**
  * A PartitionException is thrown when partitioning of a vp-tree node fails.

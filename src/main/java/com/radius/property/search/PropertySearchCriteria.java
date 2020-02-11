@@ -1,11 +1,14 @@
 package com.radius.property.search;
 
-import com.radius.jeospatial.SearchCriteria;
+import com.jeospatial.SearchCriteria;
 import com.radius.property.match.MatchProperties;
 import com.radius.property.match.PropertyMatcher;
 
+/**
+ * Criteria is used while searching in {@link com.jeospatial.vptree.VPTree}.
+ * This will be used to check fitness of the data points.
+ */
 public class PropertySearchCriteria implements SearchCriteria<PropertySpatialPoint> {
-
     private final Query query;
 
     public PropertySearchCriteria(Query query) {
@@ -29,6 +32,7 @@ public class PropertySearchCriteria implements SearchCriteria<PropertySpatialPoi
                                       query.getMaxBudget(),
                                       query.getBudgetErrorLeft(),
                                       query.getBudgetErrorRight()) &&
+                // Verify property threshold match percentage.
                 PropertyMatcher.getMatchPercent(point.getProperty(), query) >= MatchProperties.getValidMatchPercentage();
     }
 }

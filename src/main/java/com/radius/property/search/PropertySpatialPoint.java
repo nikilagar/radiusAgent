@@ -1,8 +1,11 @@
 package com.radius.property.search;
 
-import com.radius.jeospatial.util.SimpleGeospatialPoint;
+import com.jeospatial.util.SimpleGeospatialPoint;
 import com.radius.property.Property;
 
+/**
+ * Simple point in a plane that can store corresponding Property object.
+ */
 public class PropertySpatialPoint extends SimpleGeospatialPoint {
     private final Property property;
 

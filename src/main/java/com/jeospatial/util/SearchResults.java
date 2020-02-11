@@ -1,12 +1,12 @@
-package com.radius.jeospatial.util;
+package com.jeospatial.util;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.ArrayList;
 
-import com.radius.jeospatial.GeospatialPoint;
-import com.radius.jeospatial.SearchCriteria;
+import com.jeospatial.GeospatialPoint;
+import com.jeospatial.SearchCriteria;
 
 /**
  * <p>The {@code SearchResults} class is a fixed-size {@link PriorityQueue}

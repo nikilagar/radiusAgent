@@ -1,4 +1,4 @@
-package com.radius.jeospatial;
+package com.jeospatial;
 
 /**
  * {@code SearchCriteria} can be applied to nearest-neighbor searches in a

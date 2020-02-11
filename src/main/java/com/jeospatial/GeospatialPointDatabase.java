@@ -1,7 +1,6 @@
-package com.radius.jeospatial;
+package com.jeospatial;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.PriorityQueue;
 
 /**

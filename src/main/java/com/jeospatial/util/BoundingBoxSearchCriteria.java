@@ -1,8 +1,8 @@
-package com.radius.jeospatial.util;
+package com.jeospatial.util;
 
-import com.radius.jeospatial.GeospatialPoint;
-import com.radius.jeospatial.GeospatialPointDatabase;
-import com.radius.jeospatial.SearchCriteria;
+import com.jeospatial.GeospatialPoint;
+import com.jeospatial.GeospatialPointDatabase;
+import com.jeospatial.SearchCriteria;
 
 /**
  * A {@link SearchCriteria} implementation that matches all points within a

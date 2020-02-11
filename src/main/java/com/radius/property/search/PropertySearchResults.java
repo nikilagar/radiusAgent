@@ -1,7 +1,7 @@
 package com.radius.property.search;
 
-import com.radius.jeospatial.SearchCriteria;
-import com.radius.jeospatial.util.ReverseComparator;
+import com.jeospatial.SearchCriteria;
+import com.jeospatial.util.ReverseComparator;
 import com.radius.property.match.PropertyMatcher;
 
 import java.util.ArrayList;
@@ -9,6 +9,11 @@ import java.util.Collection;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * Priority Queue used by {@link com.jeospatial.vptree.VPTree} to store the
+ * prioritized results. Dump least significant points over most significant ones.
+ * @param <E>
+ */
 public class PropertySearchResults <E extends PropertySpatialPoint> extends PriorityQueue<E> {
     private final Query query;
     private final int maxSize;

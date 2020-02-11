@@ -1,13 +1,13 @@
 package com.radius.property.search;
 
-import com.radius.jeospatial.util.SimpleGeospatialPoint;
+import com.jeospatial.util.SimpleGeospatialPoint;
 import com.radius.property.match.MatchProperties;
 
 /**
- * Make query based on the parameters. Parameters in which either max or min is given
- * max and min are calculated and errors are updated accordingly.
- * Eg. if min budget is 1000 and there is no max budget with 10% as full match and +/-25%.
- * We update budget min as 900 and budget max as 1100 and error as 750 and 1250.
+ * Make query based on the parameters. Parameters in which either max or min is given,
+ * pseudo max and min values are calculated and errors are updated accordingly.
+ * Eg. if min budget is 1000 and there is no max budget with 10% as full match and +/-25% as error.
+ * We update budget min budget as 900 and max budget as 1100 and error as 750 and 1250 respectively.
  */
 public class Query {
     private int minNoOfBedrooms;
@@ -17,17 +17,18 @@ public class Query {
     private double minBudget, maxBudget;
     private SimpleGeospatialPoint point;
 
-    private double bathroomErrorRight;
-    private double bedroomErrorRight;
+    private int bathroomErrorRight;
+    private int bedroomErrorRight;
+    private int bathroomErrorLeft;
+    private int bedroomErrorLeft;
     private double budgetErrorRight;
-    private double bathroomErrorLeft;
-    private double bedroomErrorLeft;
     private double budgetErrorLeft;
     private double matchDistance;
     private double errorDistance;
 
     /**
      * Initialize the query with the permissible errors that a parameter can take.
+     * -1 denotes that the value is absent.
      */
     public Query(int minNoOfBedrooms,
                  int maxNoOfBedrooms,
@@ -38,7 +39,7 @@ public class Query {
                  double minBudget,
                  double maxBudget)
     {
-        if (maxNoOfBathrooms == Integer.MIN_VALUE) {
+        if (maxNoOfBathrooms == -1) {
             this.maxNoOfBathrooms = minNoOfBathrooms + MatchProperties.getBathroomAllowable();
             this.minNoOfBathrooms = minNoOfBathrooms - MatchProperties.getBathroomAllowable();
             bathroomErrorRight =
@@ -53,7 +54,7 @@ public class Query {
                             SearchProperties.getBathroomError();
         }
 
-        if (maxNoOfBedrooms == Integer.MIN_VALUE) {
+        if (maxNoOfBedrooms == -1) {
             this.maxNoOfBedrooms = minNoOfBedrooms + MatchProperties.getBedroomAllowable();
             this.minNoOfBedrooms = minNoOfBedrooms - MatchProperties.getBedroomAllowable();
             bedroomErrorRight =
@@ -68,7 +69,7 @@ public class Query {
                             SearchProperties.getBedroomError();
         }
 
-        if (maxBudget == Double.NEGATIVE_INFINITY) {
+        if (maxBudget < 0) {
             this.maxBudget = minBudget + minBudget * MatchProperties.getBudgetAllowable() / 100;
             this.minBudget = minBudget - minBudget * MatchProperties.getBudgetAllowable() / 100;
             budgetErrorLeft =
@@ -117,19 +118,19 @@ public class Query {
         return maxBudget;
     }
 
-    public double getBathroomErrorLeft() {
+    public int getBathroomErrorLeft() {
         return bathroomErrorLeft;
     }
 
-    public double getBathroomErrorRight() {
+    public int getBathroomErrorRight() {
         return bathroomErrorRight;
     }
 
-    public double getBedroomErrorLeft() {
+    public int getBedroomErrorLeft() {
         return bedroomErrorLeft;
     }
 
-    public double getBedroomErrorRight() {
+    public int getBedroomErrorRight() {
         return bedroomErrorRight;
     }
 
