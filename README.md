@@ -1,6 +1,6 @@
 # Privacy Policy for AI Resume Tailor
 
-**Last Updated:** [Date]
+**Last Updated:** 11th Dec 2025
 
 ## 1. Overview
 AI Resume Tailor ("we", "our", or "us") respects your privacy. This policy explains how we handle your data. **In short: Your data stays on your device or your own private server.**
@@ -27,4 +27,4 @@ You have full control over your data. You can:
 -   Configure the extension to point to any server of your choice.
 
 ## 6. Contact
-If you have questions about this policy, please contact us at [Your Email].
+If you have questions about this policy, please contact us at nikil.agar@gmail.com.
