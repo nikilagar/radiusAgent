@@ -1,6 +1,6 @@
 # Privacy Policy for AI Resume Tailor
 
-**Last Updated:** 11th Dec 2025
+**Last Updated:** 13th Dec 2025
 
 ## 1. Overview
 AI Resume Tailor ("we", "our", or "us") respects your privacy. This policy explains how we handle your data. **In short: Your data stays on your device or your own private server.**
@@ -19,8 +19,8 @@ We do **not** collect, store, or transmit your personal data to our own servers.
 ## 4. Permissions Usage
 -   **ActiveTab**: Used to read the job description from the current page when you click the extension or trigger an analysis.
 -   **Storage**: Used to save your resume settings and history locally on your device.
--   **Scripting**: Used to auto-fill job application forms based on your tailored resume.
-
+-   **Side Panel**: Used to display the extension's user interface side-by-side with the current web page.
+-   **Host Permissions**: Used to communicate with the configured backend server for resume processing.
 ## 5. Your Choices
 You have full control over your data. You can:
 -   Delete your stored resume data at any time via the extension settings.
