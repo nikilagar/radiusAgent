@@ -24,6 +24,7 @@ We do **not** collect, store, or transmit your personal data to our own servers.
 -   **Storage**: Used to save your resume settings and history locally on your device.
 -   **Side Panel**: Used to display the extension's user interface side-by-side with the current web page.
 -   **Host Permissions**: Used to communicate with the configured backend server for resume processing.
+-   **Content Script (DOM Injection)**: On job application pages, the extension injects a small floating button into the page to provide quick access to the side panel. This button is purely visual and does not collect any data.
 ## 5. Your Choices
 You have full control over your data. You can:
 -   Delete your stored resume data at any time via the extension settings.
